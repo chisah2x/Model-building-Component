@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  get_data:
+    cmd: python src/stage_01_get_data.py --config=config.yaml
+    deps:
+    - path: config.yaml
+      md5: c837991078e4aac2af2832891fe9b279
+      size: 658
+    - path: src/stage_01_get_data.py
+      md5: 5c657dba22dfe1b1c289dc44e621b258
+      size: 1255
+    - path: utils.py
+      md5: ab49b01bde24c0b969e84ce2b6b764f8
+      size: 2932
+    outs:
+    - path: artifacts/data/stack_overflow_queries.xml
+      md5: d0e0e169d55954d2bd3af45565e8910a
+      size: 37866861
