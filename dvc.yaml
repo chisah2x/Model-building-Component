@@ -1,12 +1,12 @@
 stages:
-  # get_data:
-  #   cmd: python src/stage_01_get_data.py --config=config.yaml
-  #   deps:
-  #     - src/stage_01_get_data.py
-  #     - utils.py
-  #     - config.yaml
-  #   outs:
-  #     - artifacts/data/stack_overflow_queries.xml
+  get_data:
+    cmd: python src/stage_01_get_data.py --config=config.yaml
+    deps:
+      - src/stage_01_get_data.py
+      - utils.py
+      - config.yaml
+    outs:
+      - artifacts/data/stack_overflow_queries.xml
 
   prepare_data:
     cmd: python src/stage_02_prepare.py --config=config.yaml --params=params.yaml
